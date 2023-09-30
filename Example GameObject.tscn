@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://b5a6eu2oq0dlh"]
+
+[ext_resource type="Script" path="res://Scripts/UnityEngine/GameObject.cs" id="1_rh3pq"]
+[ext_resource type="Script" path="res://Scripts/UnityEngine/Transform.cs" id="2_6bf2u"]
+
+[node name="Game Object2" type="Node3D"]
+script = ExtResource("1_rh3pq")
+active = true
+
+[node name="Transform" type="Node" parent="."]
+script = ExtResource("2_6bf2u")

@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=3 uid="uid://152a3f7r34r6"]
+
+[ext_resource type="Script" path="res://Scripts/UnityEngine/GodotCompatibility/UnityEngineAutoLoad.cs" id="1_v1475"]
+[ext_resource type="Script" path="res://Scripts/UnityEngine/GameObject.cs" id="2_wwnth"]
+[ext_resource type="Script" path="res://Scripts/UnityEngine/Transform.cs" id="3_hw21c"]
+[ext_resource type="Environment" uid="uid://bnrkxegq04r6r" path="res://World Environment.tres" id="5_wyq5r"]
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_80utq"]
+
+[node name="New World" type="Node"]
+
+[node name="Unity" type="Node" parent="."]
+script = ExtResource("1_v1475")
+
+[node name="Node3D or Node 2D or Rigidbody" type="Node3D" parent="Unity"]
+script = ExtResource("2_wwnth")
+metadata/GameObject = {
+"active": true,
+"layer": 2
+}
+
+[node name="GameObject" type="Node" parent="Unity/Node3D or Node 2D or Rigidbody"]
+
+[node name="Transform" type="Node" parent="Unity/Node3D or Node 2D or Rigidbody"]
+script = ExtResource("3_hw21c")
+
+[node name="Component 1" type="Node" parent="Unity/Node3D or Node 2D or Rigidbody"]
+
+[node name="Component 2" type="Node" parent="Unity/Node3D or Node 2D or Rigidbody"]
+
+[node name="Godot Node 1 CSGCylinder3D" type="CSGCylinder3D" parent="Unity/Node3D or Node 2D or Rigidbody"]
+
+[node name="Godot Node 2" type="Node3D" parent="Unity/Node3D or Node 2D or Rigidbody"]
+
+[node name="Child 1" type="Node3D" parent="Unity/Node3D or Node 2D or Rigidbody"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.94916, 0.314796, 0, -0.314796, 0.94916, 0, 1.51305, 4.96946)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("5_wyq5r")
+camera_attributes = SubResource("CameraAttributesPractical_80utq")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.931449, -0.184767, 0.313471, -0.105116, 0.96139, 0.254323, -0.348358, 0.203938, -0.914908, 0, 0, 0)
